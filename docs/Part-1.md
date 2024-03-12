@@ -23,12 +23,12 @@ Instead of creating all the objects needed by ACM in the frontend, we just need 
 - `provision.yaml`: contains the parameters needed to provision the cluster, like `intall-config.yaml`.
 
 
-In our example repository, we can see these files for the cluster example [zamora.dev.redhat.com](../clusters/dev/zamora.dev.redhat.com):
+In our example repository, we can see these files for the cluster example [small1.skyr.dca.scc](../clusters/dev/small1.skyr.dca.scc):
 
 ```
 ├── clusters
 │   └── dev
-│       └── zamora.dev.redhat.com
+│       └── small1.skyr.dca.scc
 │           ├── conf.yaml
 │           ├── provision.yaml
 │           └── overlay
@@ -43,7 +43,7 @@ There are no specif format for conf.yaml and provision.yaml, but we follow these
 * In the folder `conf/<environment>`, we sould add the common configuration for each environment.
 * In the folder `clusters/<environment>/<cluster>`, we should add the specific configuration for the cluster. 
 * In `conf.yaml`, we should add the configuration needed for Day 2, explained in the next part: [Configuring Openshift cluster with ApplicationSets using Helm+Kustomize and ACM Policies](Part-2.md).
-* In `provision.yaml`, we should add the configuration needed for provisioning, for our Cluster-provisioning Helm chart. You can see an example of provision.yaml for the [cluster here](../clusters/dev/zamora.dev.redhat.com/provision.yaml), and for the [environment here](../conf/dev/provision.yaml).
+* In `provision.yaml`, we should add the configuration needed for provisioning, for our Cluster-provisioning Helm chart. You can see an example of provision.yaml for the [cluster here](../clusters/dev/small1.skyr.dca.scc/provision.yaml), and for the [environment here](../conf/dev/provision.yaml).
 
 
 ## Cluster-provisioning ApplicationSet

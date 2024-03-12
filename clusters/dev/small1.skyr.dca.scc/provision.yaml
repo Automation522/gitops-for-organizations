@@ -1,7 +1,7 @@
 cluster:
-  name: zamora
-  fqdn: zamora.dev.redhat.com
-  baseDomain: dev.redhat.com
+  name: small1
+  fqdn: small1.skyr.dca.scc
+  baseDomain: skyr.dca.scc
   environment: dev
   datacenter: europe
   cloud: vmware

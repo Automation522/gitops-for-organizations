@@ -1,7 +1,7 @@
 cluster:
-  name: zamora
-  domain: dev.redhat.com
-  fqdn: zamora.dev.redhat.com
+  name: small1
+  domain: skyr.dca.scc
+  fqdn: small1.skyr.dca.scc
   address: "https://kubernetes.default.svc"
   environment: dev
   datacenter: europe
