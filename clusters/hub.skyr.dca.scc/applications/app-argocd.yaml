@@ -8,7 +8,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: default
   source:
-    path: clusters/acm-hub.redhat.com
+    path: clusters/hub.skyr.dca.scc
     repoURL: >-
       https://github.com/Automation522/gitops-for-organizations.git
     targetRevision: main

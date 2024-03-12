@@ -1,7 +1,7 @@
 cluster:
-  name: salamanca
+  name: small2
   domain: pre.redhat.com
-  fqdn: salamanca.pre.redhat.com
+  fqdn: small2.pre.redhat.com
   address: "https://kubernetes.default.svc"
   environment: pre
   datacenter: europe
