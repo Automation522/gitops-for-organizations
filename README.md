@@ -41,4 +41,32 @@ Openshift GitOps (ArgoCD) is used as a Continuous Delivery tool for applying all
 
 
 
+graph LR
+    User((Utilisateur)) -->|HTTPS/443| VIP_LB
+    Admin((Admin)) -->|SSH/22| VIP_MGMT
+
+    subgraph "Load Balancer Layer"
+        VIP_LB[VIP Service]
+    end
+
+    subgraph "DC 1 (VLAN App)"
+        K1[Keycloak 1]
+        I1[FreeIPA 1]
+        P1[Postgres 1]
+    end
+
+    subgraph "DC 2 (VLAN App)"
+        K2[Keycloak 2]
+        I2[FreeIPA 2]
+        P2[Postgres 2]
+    end
+
+    %% Entrants
+    VIP_LB --> K1
+    VIP_LB --> K2
+
+    %% Cross DC Critical Flows
+    K1 <-->|TCP 7800| K2
+    I1 <-->|TCP 389/636| I2
+    P1 <-->|TCP 5432/8008| P2
 
